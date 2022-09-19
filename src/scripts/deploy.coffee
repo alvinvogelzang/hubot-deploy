@@ -79,6 +79,11 @@ module.exports = (robot) ->
           
       if robot.adapterName is "slack"
         deployment.user = user.name
+        console.log('HELLOOOOOO MSG', msg)
+        console.log('HELLOOOOOO msg.message', msg.message)
+        console.log('HELLOOOOOO msg.message.user', msg.message.user)
+        console.log('HELLOOOOOO msg.message.user.room', msg.message.user.room)
+        console.log('HIII msg.message.channel', msg.message.channel)
         deployment.room = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(msg.message.user.room).name
 
       deployment.adapter   = robot.adapterName
