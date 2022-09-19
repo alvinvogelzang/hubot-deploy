@@ -84,7 +84,7 @@ module.exports = (robot) ->
         console.log('HELLOOOOOO msg.message.user', msg.message.user)
         console.log('HELLOOOOOO msg.message.user.room', msg.message.user.room)
         console.log('HIII msg.message.channel', msg.message.channel)
-        deployment.room = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(msg.message.user.room).name
+        deployment.room = msg.message.user.room
 
       deployment.adapter   = robot.adapterName
       deployment.robotName = robot.name
